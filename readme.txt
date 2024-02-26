@@ -1,0 +1,15 @@
+altgraph==0.17.4
+asgiref==3.7.2
+css==0.1
+distlib==0.3.8
+Django==5.0.2
+filelock==3.13.1
+macholib==1.16.3
+packaging==23.2
+platformdirs==4.2.0
+pyinstaller==6.4.0
+pyinstaller-hooks-contrib==2024.1
+setuptools==69.1.1
+sqlparse==0.4.4
+virtualenv==20.25.1
+wheel==0.42.0
