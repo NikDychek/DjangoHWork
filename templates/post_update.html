@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="#">About</a>
+    <a class="navbar-brand" href="#">Contact</a>
+{% endblock %}
+{% block content %}
+<body>
+         <h1>Cоздать пост</h1>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+          <div class="form-field">
+             <label>Title:</label>
+             {{ form.title }}
+          </div>
+          <div class="form-field">
+             <label>Content:</label>
+             {{ form.content }}
+          </div>
+          <div class="form-field">
+             <label>Category</label>
+             {{ form.category }}
+          </div>
+               <div class="form-field">
+                  <button type="submit">Cоздать пост</button>
+            </div>
+        </form>
+</body>
+</body>
+{% endblock %}
+</html>

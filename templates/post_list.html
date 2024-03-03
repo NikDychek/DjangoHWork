@@ -1,16 +1,18 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 <html>
+{% block navbar %}
+    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="#">About</a>
+    <a class="navbar-brand" href="#">Contact</a>
+{% endblock %}
+{% block content %}
 <head>
+    
     <title>Список постов</title>
 </head>
 <body>
-    <h1>Список постов</h1>
-    <ul>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Создать пост</button>
-        </form>
+    <h1>Post List</h1>
+    <ul class="post-list">
         {% for post in posts %}
         <li>
             <a href="{% url 'post_detail' post.pk %}">
@@ -21,5 +23,11 @@
         <li>Нет постов для отображения.</li>
         {% endfor %}
     </ul>
+    <form method="POST" action="{% url 'post_create' %}" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+           <button type="submit">Создать пост</button>
+    </form>    
 </body>
+{% endblock %}
 </html>

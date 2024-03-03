@@ -1,0 +1,22 @@
+.post-list li {
+  margin-bottom: 10px;
+}
+
+.post-detail {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.post-actions {
+  margin-top: 10px;
+}
+
+.post-form .form-field {
+  margin-bottom: 10px;
+}
+
+.deletion-confirmation {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}

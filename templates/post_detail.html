@@ -1,10 +1,23 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 <html>
+{% block navbar %}
+    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="#">About</a>
+    <a class="navbar-brand" href="#">Contact</a>
+{% endblock %}
+{% block content %}
 <head>
     <title>{{ post.title }}</title>
 </head>
 <body>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
+        <div class="post-detail">
+          <h1>{{ post.title }}</h1>
+          <p>{{ post.content }}</p>
+          <div class="post-actions">
+            <a href="{% url 'post_update' post.pk %}">Обновить</a>
+            <a href="{% url 'post_delete' post.pk %}">Удалить</a>
+          </div>
+        </div>
 </body>
+{% endblock %}
 </html>
