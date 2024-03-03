@@ -17,7 +17,7 @@ class Post(models.Model):
     # categories = models.ManyToManyField(Category)
     title = models.CharField(max_length=100)
     content = models.TextField()
-    pages = models.IntegerField()
+    pages = models.IntegerField(null=True, default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
